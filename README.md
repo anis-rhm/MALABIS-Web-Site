@@ -41,62 +41,7 @@ A modern, responsive e-commerce web application for clothing and fashion items b
   - SweetAlert
   - Perfect Scrollbar
 
-## 📋 Prerequisites
 
-Before running this project, make sure you have:
-
-- **XAMPP/WAMP/LAMP** (Apache, MySQL, PHP)
-- **PHP 7.4 or higher**
-- **MySQL 5.7 or higher**
-- **Web browser** (Chrome, Firefox, Safari, Edge)
-
-## ⚙️ Installation & Setup
-
-### 1. Clone or Download the Project
-
-```bash
-git clone https://github.com/yourusername/malabis-ecommerce.git
-cd malabis-ecommerce
-```
-
-### 2. Setup Database
-
-1. Start your Apache and MySQL services in XAMPP/WAMP
-2. Open phpMyAdmin (usually at `http://localhost/phpmyadmin`)
-3. Create a new database named `malabis`
-4. Import the database structure:
-   - Click on the `malabis` database
-   - Go to "Import" tab
-   - Choose the `malabis.sql` file from the project root
-   - Click "Go" to import
-
-### 3. Configure Database Connection
-
-Update the database configuration in `actions/connection.php`:
-
-```php
-<?php
-define("HOST", "localhost");
-define("DBUSER", "root");
-define("DBPASS", ""); // Add your MySQL password if any
-define("DBNAME", "malabis");
-
-$conn = mysqli_connect(HOST, DBUSER, DBPASS, DBNAME);
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-?>
-```
-
-### 4. Setup Web Server
-
-1. Copy the project folder to your web server directory:
-   - **XAMPP**: `C:\xampp\htdocs\malabis\`
-   - **WAMP**: `C:\wamp64\www\malabis\`
-   - **Linux**: `/var/www/html/malabis/`
-
-2. Make sure the `images/` directory has write permissions for product uploads
 
 ### 5. Access the Application
 
@@ -185,85 +130,7 @@ malabis/
 ### File Upload Settings
 Product images are stored in the `images/` directory. Ensure proper permissions for file uploads.
 
-## 🌐 Publishing to GitHub
 
-### 1. Initialize Git Repository
-
-```bash
-cd /path/to/your/project
-git init
-```
-
-### 2. Create .gitignore
-
-Create a `.gitignore` file to exclude sensitive files:
-
-```gitignore
-# Database configuration (sensitive)
-actions/connection.php
-
-# Environment files
-.env
-.env.local
-
-# Uploaded files (optional - you may want to keep sample images)
-images/uploads/
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Temporary files
-tmp/
-temp/
-```
-
-### 3. Create Repository on GitHub
-
-1. Go to [GitHub](https://github.com)
-2. Click "New repository"
-3. Name it `malabis-ecommerce` (or your preferred name)
-4. Add description: "E-commerce clothing store built with PHP and MySQL"
-5. Choose visibility (Public/Private)
-6. Don't initialize with README (you already have one)
-
-### 4. Push to GitHub
-
-```bash
-# Add all files
-git add .
-
-# Commit changes
-git commit -m "Initial commit: MALABIS E-commerce website"
-
-# Add remote repository
-git remote add origin https://github.com/yourusername/malabis-ecommerce.git
-
-# Push to GitHub
-git branch -M main
-git push -u origin main
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 🐛 Known Issues
 
@@ -272,32 +139,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - Email verification system not implemented
 - Product image optimization needed
 
-## 🚀 Future Enhancements
 
-- [ ] Payment gateway integration (PayPal, Stripe)
-- [ ] Email notification system
-- [ ] Inventory management
-- [ ] Order tracking system
-- [ ] Advanced search and filtering
-- [ ] Multi-language support
-- [ ] API development for mobile app
-- [ ] Performance optimization
 
-## 📞 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Contact: [your-email@example.com]
-
-## 🙏 Acknowledgments
-
-- Bootstrap for responsive design
-- Font Awesome for icons
-- jQuery for JavaScript functionality
-- All open-source contributors
-
----
-
-**Made with ❤️ by [Your Name]**
 
 *Last updated: May 2025*
